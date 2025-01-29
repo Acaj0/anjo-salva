@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="container relative z-10 mx-auto">
         <div className="flex flex-col items-center text-center ">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Design%20sem%20nome%20(13)-X7LHATZ9FWRomOwX2pq4EFOxIGhCPc.png"
+            src="/logo.png"
             alt="Anjo Salva Logo"
             width={300}
             height={300}
