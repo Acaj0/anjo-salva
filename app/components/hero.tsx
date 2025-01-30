@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100vh] flex items-center justify-center px-4 py-10 bg-bottom bg-[url(/fundo.jpg)]">
-      <div className="container relative z-10 mx-auto">
+    <section id="hero" className="relative min-h-[100vh] flex items-center justify-center px-4 py-10 bg-bottom bg-[url(/funfo.jpg)] bg-no-repeat">
+      <div className="container items-center justify-center mt-32 relative z-10 mx-auto">
         <div className="flex flex-col items-center text-center ">
           <Image
             src="/logo.png"

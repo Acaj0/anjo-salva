@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card"
-import WaveDivider from "./wave-divider"
 
 const eventTypes = [
   {
@@ -26,7 +25,7 @@ const eventTypes = [
 
 export default function EventTypes() {
   return (
-    <section className="relative py-20 bg-[#07031c]">
+    <section className="relative py-20 min-h-screen bg-[#07031c]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">Classificação dos Eventos</h2>
         <p className="text-center text-gray-200 mb-12 max-w-3xl mx-auto">

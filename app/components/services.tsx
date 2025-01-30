@@ -1,5 +1,4 @@
 import { Shield, Flame, AmbulanceIcon as FirstAid, Ambulance, Users } from "lucide-react"
-import WaveDivider from "./wave-divider"
 
 const services = [
   {
@@ -27,7 +26,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="relative min-h-screen py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#07031c] mb-12">Nossos Serviços</h2>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2 gap-8">

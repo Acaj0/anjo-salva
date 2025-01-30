@@ -1,7 +1,7 @@
 import "./globals.css"
-import { Plus_Jakarta_Sans } from "next/font/google"
+import { Montserrat} from "next/font/google"
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] })
+const jakarta = Montserrat({ subsets: ["latin"] })
 
 export default function RootLayout({
   children,

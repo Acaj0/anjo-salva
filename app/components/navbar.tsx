@@ -1,79 +1,64 @@
-"use client";
-
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Menu, X } from "lucide-react";
-
-const navigation = [
-  { name: "Início", href: "#" },
-  { name: "Serviços", href: "#services" },
-  { name: "Eventos", href: "#events" },
-  { name: "Contato", href: "#contact" },
-];
+'use client'
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(true)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsTransparent(entry.isIntersecting)
+      },
+      { threshold: 0.1 },
+    )
+
+    const heroSection = document.querySelector("#hero")
+    if (heroSection) {
+      observer.observe(heroSection)
+    }
+
+    return () => {
+      if (heroSection) {
+        observer.unobserve(heroSection)
+      }
+    }
+  }, [])
 
   return (
-    <nav className="fixed top-0 w-full bg-white z-50 shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex flex-col items-center">
-            <Image
-              src="/logo.png"
-              alt="Anjo Salva Logo"
-              width={40}
-              height={40}
-            />
-            <span className="font-semibold text-[#07031c]">Anjo Salva </span>
-          </div>
-
-          {/* Desktop menu */}
-          <div className="hidden md:flex items-center gap-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 hover:text-[#07031c] transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-600"
-            >
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isTransparent ? "bg-transparent text-white" : "bg-white shadow-sm text-[#07031c]"
+      }`}
+    >
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="Anjo Salva Logo" width={50} height={50} className="mr-2" />
+          <span className="text-2xl font-bold">Anjo Salva</span>
+        </Link>
+        <div className="space-x-4">
+          <Link href="/" className="hover:underline">
+            Home
+          </Link>
+          <Link href="/about" className="hover:underline">
+            Sobre
+          </Link>
+          <Link href="/services" className="hover:underline">
+            Serviços
+          </Link>
+          <Button
+            className={`rounded-full ${
+              isTransparent ? "bg-white text-[#07031c]" : "bg-[#07031c] text-white"
+            } hover:opacity-90`}
+          >
+            Contato
+          </Button>
         </div>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block py-2 text-gray-600 hover:text-[#07031c] transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        )}
       </div>
+      {!isTransparent && <div className="h-px bg-[#07031c] opacity-20" />}
     </nav>
-  );
+  )
 }
+
