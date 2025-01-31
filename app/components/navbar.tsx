@@ -2,7 +2,9 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 
 export default function Navbar() {
   const [isTransparent, setIsTransparent] = useState(true)
@@ -27,10 +29,16 @@ export default function Navbar() {
     }
   }, [])
 
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "Sobre" },
+    { href: "/services", label: "Serviços" },
+  ]
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isTransparent ? "bg-transparent text-white" : "bg-white shadow-sm text-[#07031c]"
+        isTransparent ? "bg-transparent text-white" : "bg-white text-[#07031c]"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -38,16 +46,12 @@ export default function Navbar() {
           <Image src="/logo.png" alt="Anjo Salva Logo" width={50} height={50} className="mr-2" />
           <span className="text-2xl font-bold">Anjo Salva</span>
         </Link>
-        <div className="space-x-4">
-          <Link href="/" className="hover:underline">
-            Home
-          </Link>
-          <Link href="/about" className="hover:underline">
-            Sobre
-          </Link>
-          <Link href="/services" className="hover:underline">
-            Serviços
-          </Link>
+        <div className="hidden md:flex space-x-4 items-center">
+          {navItems.map((item) => (
+            <Link key={item.href} href={item.href} className="hover:underline">
+              {item.label}
+            </Link>
+          ))}
           <Button
             className={`rounded-full ${
               isTransparent ? "bg-white text-[#07031c]" : "bg-[#07031c] text-white"
@@ -56,6 +60,27 @@ export default function Navbar() {
             Contato
           </Button>
         </div>
+        <Sheet >
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="md:hidden">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent className=" bg-white " side="right">
+            <SheetHeader>
+              <SheetTitle>Menu de Navegação</SheetTitle>
+            </SheetHeader>
+            <div className="flex flex-col bg-white space-y-4 mt-4">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} className="text-lg bg-white hover:underline">
+                  {item.label}
+                </Link>
+              ))}
+              <Button className="rounded-full bg-[#07031c] text-white hover:opacity-90">Contato</Button>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
       {!isTransparent && <div className="h-px bg-[#07031c] opacity-20" />}
     </nav>
