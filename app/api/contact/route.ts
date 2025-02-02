@@ -8,7 +8,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: "Anjo Salva <onboarding@resend.dev>",
-      to: ["seu-email@exemplo.com"], // Substitua pelo seu email
+      to: ["antoniocarlosjr007@hotmail.com"], // Substitua pelo seu email
       subject: "Novo Contato - Anjo Salva",
       html: `
         <h2>Novo contato do site</h2>
