@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-4">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Design%20sem%20nome%20(13)-X7LHATZ9FWRomOwX2pq4EFOxIGhCPc.png"
+              src="/logo.png"
               alt="Anjo Salva Logo"
               width={100}
               height={100}
