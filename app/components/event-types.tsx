@@ -39,9 +39,9 @@ const ServiceAreaAndEventTypes = () => {
           para nossa comunidade cuiabana.
         </p>
 
-        <div className="grid  md:grid-cols-2 max-h-[220px] gap-2 md:gap-8 items-center md:mb-16 mb-64">
+        <div className="grid  md:grid-cols-2 max-h-[220px] gap-2 md:gap-8 items-center md:mb-16 mb-96">
           <div className="space-y-6">
-            <div className="bg-white h-[220px] backdrop-blur-sm rounded overflow-hidden">
+            <div className="bg-white min-h-[220px] backdrop-blur-sm rounded overflow-hidden">
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-[#07031c] mb-4">
                   Por que apenas Cuiabá?
@@ -109,7 +109,7 @@ const ServiceAreaAndEventTypes = () => {
           
         </div>
       </div>
-      <p className="text-center text-gray-200 mt-10 max-w-3xl mx-auto text-2xl font-bold">
+      <p className="text-center  text-gray-200 mt-10 max-w-3xl mx-2 md:mx-auto text-2xl font-bold">
             Não importa o tamanho do evento e nem o número de pessoas, nossa
             frota de ambulâncias consegue atender com primazia as emergências no
             próprio local.
