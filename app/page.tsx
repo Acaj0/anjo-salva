@@ -4,6 +4,7 @@ import Services from "./components/services"
 import EventTypes from "./components/event-types"
 import ContactForm from "./components/contact-form"
 import Footer from "./components/footer"
+import About from "./components/about"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <Services />
         <EventTypes />
+        <About />
         <ContactForm />
       </main>
       <Footer />
