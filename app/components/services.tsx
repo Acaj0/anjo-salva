@@ -26,10 +26,10 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative min-h-screen py-20 pattern-cross pattern-blue-50 pattern-bg-white 
+    <section id="services" className="relative min-h-screen py-20 pattern-cross pattern-blue-50 pattern-bg-white 
   pattern-size-6 pattern-opacity-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#07031c] mb-12 !opacity-100">Nossos Serviços</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#07031c] mb-12 !opacity-100 pt-8">Nossos Serviços</h2>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
