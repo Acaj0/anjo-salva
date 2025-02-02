@@ -44,6 +44,7 @@ export default function About() {
           Sobre Nossa Empresa
         </h2>
 
+
         <div className="relative lg:flex hidden">
           {infoCards.map((card, index) => (
             <div
