@@ -32,11 +32,11 @@ const infoCards = [
         <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-4xl font-bold text-center text-[#07031c] mb-10 pt-10">Sobre Nossa Empresa</h2>
 
-            <div className="relative">
+            <div className="relative gap-40">
             {infoCards.map((card, index) => (
                 <div
                 key={index}
-                className={`absolute w-full md:w-2/3 lg:w-1/2 ${index % 2 === 0 ? "left-0" : "right-0"}`}
+                className={`lg: absolute w-full md:w-2/3 lg:w-1/2 ${index % 2 === 0 ? "left-0" : "right-0"}`}
                 style={{ top: `${index * 10 + 5}rem` }}
                 >
                 <div className="p-6 rounded-2xl bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 !opacity-100 mx-10">

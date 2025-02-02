@@ -31,8 +31,9 @@ export default function Navbar() {
 
   const navItems = [
     { href: "#hero", label: "Home" },
-    { href: "#about", label: "Sobre" },
     { href: "#services", label: "Serviços" },
+    { href: "#cover", label: "Cobertura" },
+    { href: "#about", label: "Sobre" },
   ]
 
   return (
