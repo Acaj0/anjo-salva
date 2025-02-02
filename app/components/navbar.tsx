@@ -54,7 +54,7 @@ export default function Navbar() {
           ))}
           <Button
             className={`rounded-full ${
-              isTransparent ? "bg-white text-[#07031c]" : "bg-[#07031c] text-white"
+              isTransparent ? "bg-white text-[#07031c] hover:text-white" : "bg-[#07031c] text-white hover:text-[#07031c]"
             } hover:opacity-90`}
           >
             Contato
