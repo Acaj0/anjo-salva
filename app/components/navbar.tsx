@@ -52,13 +52,13 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Button
+          <a href="#contact"><Button
             className={`rounded-full ${
               isTransparent ? "bg-white text-[#07031c] hover:text-white" : "bg-[#07031c] text-white hover:text-[#07031c]"
             } hover:opacity-90`}
           >
             Contato
-          </Button>
+          </Button></a>
         </div>
         <Sheet >
           <SheetTrigger asChild>
@@ -77,7 +77,7 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <Button className="rounded-full bg-[#07031c] text-white hover:opacity-90">Contato</Button>
+              <a href="#contact"><Button className="rounded-full bg-[#07031c] text-white hover:opacity-90">Contato</Button></a>
             </div>
           </SheetContent>
         </Sheet>
