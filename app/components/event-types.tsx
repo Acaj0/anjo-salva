@@ -46,6 +46,11 @@ export default function EventTypes() {
             </Card>
           ))}
         </div>
+        <div>
+        <p className="text-center text-gray-200 mb-12 mt-14 max-w-3xl mx-auto text-2xl font-bold">
+          Não importa o tamanho do evento e nem o número de pessoas, nossa frota de ambulâncias consegue atender com primazia as emergências no próprio local.
+        </p>
+        </div>
       </div>
     </section>
   )
