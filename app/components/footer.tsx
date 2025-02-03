@@ -20,15 +20,15 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <div className="flex items-center text-[#07031c] gap-2 hover:text-blue-400 transition-colors">
+            <div className="flex items-center text-[#07031c] gap-2 hover:text-blue-400 transition-colors cursor-pointer">
               <Phone className="w-5 h-5 text-[#07031c]" />
-              <span>(XX) XXXX-XXXX</span>
+              <span>(65) 99216-7706</span>
             </div>
-            <div className="flex items-center gap-2 text-[#07031c] hover:text-blue-400 transition-colors">
+            <div className="flex items-center gap-2 text-[#07031c] hover:text-blue-400 transition-colors cursor-pointer">
               <Mail className="w-5 h-5 text-[#07031c]" />
-              <span>contato@anjosalva.com.br</span>
+              <span>anjossalvabrigadadeemergencia@gmail.com</span>
             </div>
-            <div className="flex items-center gap-2 text-[#07031c] hover:text-blue-400 transition-colors">
+            <div className="flex items-center gap-2 text-[#07031c] hover:text-blue-400 transition-colors cursor-pointer">
               <MapPin className="w-5 h-5 text-[#07031c]" />
               <span>Localização</span>
             </div>

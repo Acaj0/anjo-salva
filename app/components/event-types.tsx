@@ -34,9 +34,7 @@ const ServiceAreaAndEventTypes = () => {
           Nossa Área de Atendimento
         </h2>
         <p className="text-center text-gray-200 mb-12 max-w-3xl mx-auto">
-          Com orgulho, a Anjo Salva atende exclusivamente a cidade de Cuiabá,
-          nossa terra querida. Nosso compromisso é oferecer o melhor serviço
-          para nossa comunidade cuiabana.
+          Com orgulho, a Anjo Salva atende a todo o estado de Mato Grosso. Nosso compromisso é oferecer o melhor serviço para a comunidade mato-grossense.
         </p>
 
         <div className="grid  md:grid-cols-2 max-h-[220px] gap-2 md:gap-8 items-center md:mb-16 mb-96">
@@ -44,14 +42,14 @@ const ServiceAreaAndEventTypes = () => {
             <div className="bg-white min-h-[220px] backdrop-blur-sm rounded overflow-hidden">
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-[#07031c] mb-4">
-                  Por que apenas Cuiabá?
+                  Mais Segurança Para o Seu Evento
                 </h3>
                 <ul className="space-y-2">
                   {[
-                    "Foco em excelência no atendimento local",
+                    "Foco em excelência no atendimento no estado inteiro",
                     "Conhecimento profundo da nossa região",
                     "Resposta rápida em emergências",
-                    "Relacionamento próximo com a comunidade cuiabana",
+                    "Relacionamento próximo com a comunidade mato-grossense",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center text-gray-600">
                       <MapPin className="h-5 w-5 text-blue-900 mr-2" />
@@ -75,7 +73,7 @@ const ServiceAreaAndEventTypes = () => {
                 <MapPin className="h-8 w-8 text-blue-900" />
               </div>
               <p className="mt-2 text-lg font-semibold text-white shadow-text">
-                Cuiabá
+                Mato Grosso
               </p>
             </div>
           </div>

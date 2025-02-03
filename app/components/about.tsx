@@ -11,7 +11,7 @@ const infoCards = [
     icon: Building2,
     title: "Quem Somos",
     description:
-      "Somos uma empresa especializada em atendimento médico de emergência para eventos, uma excelente opção para quem procura uma ambulância particular em Cuiabá.",
+      "Somos uma empresa especializada em grandes eventos, formada por uma brigada de emergência e  profissionais de enfermagem. Uma excelente opção para quem procura profissionais qualificados e ambulância particular.",
   },
   {
     icon: MapPin,
@@ -21,7 +21,7 @@ const infoCards = [
   },
   {
     icon: Siren,
-    title: "Serviço Médico em Eventos",
+    title: "Serviço de Enfermagem em Eventos",
     description:
       "É uma exigência regulamentada por leis a cobertura de eventos por equipes de saúde com ambulância.",
   },
@@ -66,7 +66,7 @@ export default function About() {
         </div>
         <div className="flex flex-col gap-10 lg:hidden">
         {infoCards.map((card, index) => (
-          <div className="p-6 rounded-2xl bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 !opacity-100 mx-10">
+          <div key={index} className="p-6 rounded-2xl bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 !opacity-100 mx-10">
             <card.icon className="w-16 h-16 text-[#07031c] mb-6" />
             <h3 className="text-2xl font-semibold text-[#07031c] mb-4">
               {card.title}
@@ -82,8 +82,8 @@ export default function About() {
           </h2>
           <div className="flex flex-col md-flex-row items-center justify-center">
             <Stethoscope className="w-16 h-16 md:mb-0 mb-4 md:mr-6" />
-            <p className="text-xl max-w-3xl text-center">
-              Garantir pronto atendimento médico por profissionais da saúde em
+            <p className="text-xl max-w-3xl text-center pt-6">
+              Garantir o pronto atendimento rápido por profissionais da saúde em
               situações que necessitem de primeiros socorros imediatos, e quando
               necessário, encaminhamento à unidade hospitalar.
             </p>
