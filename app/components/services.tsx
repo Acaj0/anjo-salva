@@ -46,9 +46,7 @@ export default function Services() {
       <h2 className="text-3xl md:text-4xl font-bold text-center text-[#07031c] mt-14 !opacity-100">Atendimento Rápido e Seguro para Eventos</h2>
       <div className="container mx-auto mt-10">
         <div className="p-10 rounded-2xl bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 !opacity-100">
-          <p className="text-xl">A ambulância para eventos promove mais segurança, conforto e bem-estar aos participantes e profissionais envolvidos.</p>
-          <br />
-          <p className="text-xl">Trabalhamos com estoque próprio de medicamentos, o que permite atendimento pré-hospitalar muito mais ágil e eficiente.</p>
+          <p className="text-xl">A ambulância para eventos promove mais segurança, conforto e bem-estar aos participantes e profissionais envolvidos. Levando a uma experiência mais agradável e segura durante todo o decorrer do seu evento.</p>
         </div>
       </div>
     </section>

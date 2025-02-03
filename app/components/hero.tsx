@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-[100vh] flex items-center justify-center px-4 py-10 bg-bottom bg-[url(/funfo.jpg)] bg-no-repeat">
+    <section id="hero" className="relative min-h-[100vh] flex items-center justify-center px-4 py-10 bg-bottom bg-[url(/hero-bg.jpg)] bg-no-repeat bg-cover">
       <div className="container items-center justify-center mt-32 relative z-10 mx-auto">
         <div className="flex flex-col items-center text-center ">
           <Image
@@ -19,7 +19,7 @@ export default function Hero() {
             Anjo Salva
           </h1>
           <h1 className="text-2xl mt-2 md:text-4xl font-bold text-white max-w-4xl leading-tight">
-            Brigada de Emergencia
+            Brigada de Emergência
           </h1>
           <h1 className="text-2xl mt-10 md:text-4xl font-bold text-white max-w-4xl leading-tight">
             Garanta a segurança do seu público!
