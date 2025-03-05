@@ -34,6 +34,7 @@ export default function Navbar() {
     { href: "#services", label: "Serviços" },
     { href: "#cover", label: "Cobertura" },
     { href: "#about", label: "Sobre" },
+    { href: "#gallery", label: "Galeria" },
   ]
 
   return (
