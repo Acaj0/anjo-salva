@@ -1,4 +1,5 @@
-import { FireExtinguisher, Flame, BriefcaseMedical, Ambulance, Users } from "lucide-react"
+import { FireExtinguisher, Flame, BriefcaseMedical, Ambulance } from "lucide-react"
+import Image from "next/image"
 
 const services = [
   {
@@ -21,16 +22,20 @@ const services = [
     title: "Prevenção de Incêndios",
     description: "Combate direto e prevenção de incêndios",
   },
-
 ]
 
 export default function Services() {
   return (
-    <section id="services" className="relative min-h-screen py-20 pattern-cross pattern-blue-50 pattern-bg-white 
-  pattern-size-6 pattern-opacity-100">
+    <section
+      id="services"
+      className="relative min-h-screen py-20 pattern-cross pattern-blue-50 pattern-bg-white 
+  pattern-size-6 pattern-opacity-100"
+    >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#07031c] mb-12 !opacity-100 pt-8">Nossos Serviços</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2 gap-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#07031c] mb-12 !opacity-100 pt-8">
+          Nossos Serviços
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
@@ -43,10 +48,33 @@ export default function Services() {
           ))}
         </div>
       </div>
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#07031c] mt-14 !opacity-100">Atendimento Rápido e Seguro para Eventos</h2>
-      <div className="container mx-auto mt-10">
-        <div className="p-10 rounded-2xl bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 !opacity-100">
-          <p className="text-xl">A ambulância para eventos promove mais segurança, conforto e bem-estar aos participantes e profissionais envolvidos. Levando a uma experiência mais agradável e segura durante todo o decorrer do seu evento.</p>
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#07031c] mt-14 mb-10 !opacity-100">
+          Atendimento Rápido e Seguro para Eventos
+        </h2>
+        <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
+          <div className="lg:w-1/2 flex">
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 lg:p-10 shadow-xl border border-gray-100 flex items-center">
+              <p className="text-xl leading-relaxed">
+                A ambulância para eventos promove mais segurança, conforto e bem-estar aos participantes e profissionais
+                envolvidos. Levando a uma experiência mais agradável e segura durante todo o decorrer do seu evento.
+              </p>
+            </div>
+          </div>
+          <div className="lg:w-1/2">
+            <div className="relative h-full rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/gallery7.jpg"
+                alt="Profissionais da Brigada de Emergência em evento"
+                width={600}
+                height={800}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#07031c]/80 to-transparent p-4">
+                <p className="text-white font-medium">Profissionais qualificados em ação durante eventos</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
